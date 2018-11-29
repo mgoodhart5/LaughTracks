@@ -10,4 +10,13 @@ class Comedian < ActiveRecord::Base
   def self.unique_list_of_hometowns
     distinct.pluck(:hometown)
   end
+
+  def self.list(params)
+    return Comedian.all unless params
+    if params[:age]
+      Comedian.where(age:params[:age])
+    else
+      Comedian.all
+    end
+  end
 end
