@@ -11,6 +11,7 @@
       <h3>Statistics</h3>
         <h4>Average Age: <%= @comedians.average_age %></h4>
         <h4>Average Run Time: <%= @specials.average_run_time %> minutes</h4>
+        <h4>Hailing From These Cities: <%= @comedians.unique_list_of_hometowns %></h4>
     </div>
     <% @comedians.each do |comedian| %>
       <ul id="comedian-<%= comedian.id %>">
