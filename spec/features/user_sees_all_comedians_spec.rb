@@ -4,7 +4,7 @@ RSpec.describe "As a user" do
       comedian_1 = Comedian.create!(name: "name_1", hometown: "hometown_1", age: 1)
       comedian_2 = Comedian.create!(name: "name_2", hometown: "hometown_2", age:2)
 
-      visit '/comedians' 
+      visit '/comedians'
 
       within "#comedian-" + "#{comedian_1.id}" do
         expect(page).to have_content("Name: #{comedian_1.name}")
