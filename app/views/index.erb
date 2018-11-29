@@ -1,11 +1,23 @@
-<% @comedians.each do |comedian| %>
-  <ul id="comedian-<%= comedian.id %>">
-    <li>Name: <%= comedian.name %></li>
-    <li>Hometown: <%= comedian.hometown %></li>
-    <li>Age: <%= comedian.age %></li>
-    <hX>Specials:</hX>
-      <% comedian.specials.each do |special| %>
-      <li><%= special.name %>, <%= special.run_time %> minutes</li>
-      <% end %>
-  </ul><br>
-<% end %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="stylesheets/main.css" title="css" type="text/css" />
+    <meta charset="utf-8">
+    <title>Comedians</title>
+  </head>
+  <body>
+    <h1>Fabulous Female Comedians</h1>
+    <% @comedians.each do |comedian| %>
+      <ul id="comedian-<%= comedian.id %>">
+        <li>Name: <%= comedian.name %></li>
+        <li>Hometown: <%= comedian.hometown %></li>
+        <li>Age: <%= comedian.age %></li>
+        <hX>Specials:</hX>
+          <% comedian.specials.each do |special| %>
+          <li><%= special.name %>, <%= special.run_time %> minutes</li>
+          <li><img src=<%= special.image_path %> alt="Picture of <%= comedian.name %>">
+          <% end %>
+      </ul><br>
+    <% end %>
+  </body>
+</html>
