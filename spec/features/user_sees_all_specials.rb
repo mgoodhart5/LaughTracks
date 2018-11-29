@@ -9,10 +9,16 @@ RSpec.describe "As a user" do
 
       visit '/comedians'
 
-      expect(page).to have_content(comedian_1.specials.first.name)
-      expect(page).to have_content(comedian_1.specials.first.run_time)
-      expect(page).to have_content(comedian_2.specials.first.name)
-      expect(page).to have_content(comedian_2.specials.first.run_time)
+      within "#comedian-" + "#{comedian_1.id}" do
+        expect(page).to have_content(comedian_1.specials.first.name)
+        expect(page).to have_content(comedian_1.specials.first.run_time)
+      end
+
+      within "#comedian-" + "#{comedian_2.id}" do
+        expect(page).to have_content(comedian_2.specials.first.name)
+        expect(page).to have_content(comedian_2.specials.first.run_time)
+      end
+
     end
   end
 end
