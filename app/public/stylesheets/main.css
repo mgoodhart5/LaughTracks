@@ -1,0 +1,8 @@
+body {
+  background-color: pink;
+}
+
+img {
+  max-width: 65px;
+  max-height: 80px;
+}
