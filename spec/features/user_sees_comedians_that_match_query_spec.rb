@@ -8,22 +8,15 @@ RSpec.describe "As a user" do
 
       visit '/comedians?age=36'
 
-      within "#comedian-" + "#{comedian_1.id}" do
+
         expect(page).to have_content(comedian_1.name)
         expect(page).to have_content(comedian_1.age)
-      end
-      within "#comedian-" + "#{comedian_4.id}" do
         expect(page).to have_content(comedian_4.name)
         expect(page).to have_content(comedian_4.age)
-      end
-      within "#comedian-" + "#{comedian_1.id}" do
         expect(page).not_to have_content(comedian_2.name)
         expect(page).not_to have_content(comedian_2.age)
-      end
-      within "#comedian-" + "#{comedian_4.id}" do
         expect(page).not_to have_content(comedian_3.name)
         expect(page).not_to have_content(comedian_3.age)
-      end
     end
   end
 end
