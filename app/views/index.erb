@@ -7,7 +7,11 @@
   </head>
   <body>
     <h1>Fabulous Female Comedians</h1>
-    <h4>Average Age: <%= @comedians.average_age %></h4>
+    <div id="statistics">
+      <h3>Statistics</h3>
+        <h4>Average Age: <%= @comedians.average_age %></h4>
+        <h4>Average Run Time: <%= @specials.average_run_time %> minutes</h4>
+    </div>
     <% @comedians.each do |comedian| %>
       <ul id="comedian-<%= comedian.id %>">
         <li>Name: <%= comedian.name %></li>
