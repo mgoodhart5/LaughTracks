@@ -12,9 +12,10 @@
     <main>
       <div data-spec="statistics">
         <h3>Statistics</h3>
-          <h4>Average Age: <%= @average_age %></h4>
+          <h4>Average Age: <%= @average_age.to_i %></h4>
           <h4>Average Run Time: <%= @average_run_time %> minutes</h4>
-          <h4>Hailing From These Cities: <%= @hometowns.join(", ") %></h4>
+          <h4>Hailing From These Cities: </h4>
+            <p><%= @hometowns.join(", ") %></p>
           <h4>Total Specials: <%= @total_count %></h4>
       </div>
       <div class="comedians">
