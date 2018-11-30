@@ -1,6 +1,28 @@
 body {
   background-color: pink;
   padding: 20px;
+  font-style: cursive;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h4 {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
 }
 
 .comedians {
