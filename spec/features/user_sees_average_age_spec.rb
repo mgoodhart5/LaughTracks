@@ -6,7 +6,7 @@ RSpec.describe "As a user" do
 
       visit '/comedians'
 
-      expect(page).to have_content(Comedian.average_age)
+      expect(page).to have_content(@average_age)
     end
   end
 end
