@@ -24,16 +24,6 @@ RSpec.describe Comedian do
     end
   end
 
-  describe 'Class Methods' do
-    describe '.average_run_time' do
-      it 'returns average run time for all specials' do
-        Special.create(name: "special_1", run_time: "20")
-        Special.create(name: "special_2", run_time: "30")
-
-        expect(Special.average_run_time).to eq(25)
-      end
-    end
-  end
 
   describe 'Class Methods' do
     describe '.unique_list_of_hometowns' do
