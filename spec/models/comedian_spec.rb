@@ -32,9 +32,9 @@ RSpec.describe Comedian do
         city_2 = "hometown_2"
         city_4 = "hometown_4"
         Comedian.create(name: "name_1", hometown: city_1, age: 1)
-        Comedian.create(name: "name_2", hometown: city_2, age:2)
+        Comedian.create(name: "name_2", hometown: city_2, age: 2)
         Comedian.create(name: "name_3", hometown: city_1, age: 3)
-        Comedian.create(name: "name_4", hometown: city_4, age:4)
+        Comedian.create(name: "name_4", hometown: city_4, age: 4)
 
         expect(Comedian.unique_list_of_hometowns).to eq([city_1, city_4, city_2])
       end

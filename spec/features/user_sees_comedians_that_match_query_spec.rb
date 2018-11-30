@@ -12,7 +12,6 @@ RSpec.describe "As a user" do
       expect(page).to_not have_css("#comedian-#{comedian_3.id}")
       expect(page).to have_css("#comedian-#{comedian_1.id}")
       expect(page).to have_css("#comedian-#{comedian_4.id}")
-
     end
   end
 end
