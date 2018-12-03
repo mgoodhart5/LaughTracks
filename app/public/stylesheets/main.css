@@ -1,7 +1,7 @@
 body {
   background-color: pink;
   padding: 20px;
-  font-style: cursive;
+  font-family: tahoma;
 }
 
 header {
@@ -9,15 +9,10 @@ header {
   justify-content: center;
 }
 
-p {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 h4 {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 h3 {
@@ -32,15 +27,32 @@ h3 {
 }
 
 ul {
-  width: 200px;
-  /* border: 1px solid; */
+  width: 220px;
   margin: 10px;
   padding: 10px 30px;
   background-color: #bdb5b5;
 }
 
+.new-comedian {
+  display: flex;
+  justify-content: center;
+}
 
 img {
   max-width: 65px;
   max-height: 80px;
+}
+
+.new_form {
+  background-color: grey;
+  padding: 20px;
+}
+.adding_new {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  margin: 5px;
+  padding: 5px;
 }

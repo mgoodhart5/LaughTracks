@@ -6,11 +6,14 @@
     <title>Comedians</title>
   </head>
   <body>
-    <form class="new-comedian" action="/comedians" method=POST>
-      <input type="text" name="comedian[name]" placeholder="Comedian Name">
-      <input type="text" name="comedian[hometown]" placeholder="Comedian Hometown">
-      <input type="text" name="comedian[age]" placeholder="Comedian Age">
-      <input type="submit" value="Submit">
-    </form>
+    <div class="new_form">
+      <h3 class="adding_new">Add A New Comedian!</h3>
+      <form class="new-comedian" action="/comedians" method=POST>
+        <input type="text" name="comedian[name]" placeholder="Comedian Name">
+        <input type="text" name="comedian[hometown]" placeholder="Comedian Hometown">
+        <input type="text" name="comedian[age]" placeholder="Comedian Age">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </body>
 </html>

@@ -12,7 +12,7 @@
     <main>
       <div data-spec="statistics">
         <h3>Statistics</h3>
-          <h4>Average Age: <%= @average_age %></h4>
+          <h4>Average Age: <%= @average_age.to_i %></h4>
           <h4>Average Run Time: <%= @average_run_time %> minutes</h4>
           <h4>Hailing From These Cities: <%= @hometowns.join(", ") %></h4>
           <h4>Total Specials: <%= @total_count %></h4>
@@ -27,7 +27,7 @@
               <li>Total Specials: <%= comedian.specials.count %></li>
               <% comedian.specials.each do |special| %>
               <li><%= special.name %>, <%= special.run_time %> minutes</li>
-              <li><img src="<%= special.image_path %>" alt="Picture of <%= comedian.name %>">
+              <p><img src="<%= special.image_path %>" alt="Picture of <%= comedian.name %>"></p>
               <% end %>
           </ul>
         <% end %>

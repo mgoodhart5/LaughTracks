@@ -11,13 +11,8 @@ RSpec.describe "As a user" do
 
       visit '/comedians'
 
-      # within "#statistics" do
-      #   expect(page).to have_content("Average Age: #{Comedian.average_age}")
-      #   expect(page).to have_content("Average Run Time: #{Special.average_run_time}")
-      #   expect(page).to have_content("Hailing From These Cities: #{Comedian.unique_list_of_hometowns.join(', ')}")
-      # end
       within "div[data-spec='statistics']" do
-        expect(page).to have_content("Average Age: #{Comedian.average_age}")
+        expect(page).to have_content("Average Age: #{Comedian.average_age.to_i}")
         expect(page).to have_content("Average Run Time: #{Special.average_run_time}")
         expect(page).to have_content("Hailing From These Cities: #{Comedian.unique_list_of_hometowns.join(', ')}")
       end
